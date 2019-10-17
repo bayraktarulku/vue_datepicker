@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Datepicker</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+  <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/bootstrap/font-awesome/css/font-awesome.min.css">
+
+  <script src="static/js/vue.js"></script>
+</head>
+<body>
+    <div class="col-md-2" id="app">
+      <datepicker ref="start_time" :date="date"></datepicker>
+    </div>
+  <!-- jQuery 3 -->
+  <script src="static/plugins/jQuery/jquery.min.js"></script>
+  <script src="static/js/jquery-ui.js"></script>
+  <script src="static/js/datepick_normal/moment-with-locales.min.js"></script>
+  <script src="static/js/datepick_normal/bootstrap-datetimepicker.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap-datetimepicker.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="static/css/style.css"> -->
+
+  <script>
+    $.fn.datetimepicker.defaults['locale'] = 'tr'
+  </script>
+  <!-- Vue app -->
+  <script src="static/js/vue_gui.js"></script>
+</body>
+</html>
