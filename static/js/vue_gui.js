@@ -6,13 +6,12 @@ Vue.component('datepicker', {
     <div class="form-group" style="margin-bottom:0">\
     <div class="input-group date datepicker" id="datetimepicker">\
     <input id="calendar" type="text" class="form-control" style="height: 36px;" :value="date" v-on:focus="datepick_dialog_open" v-on:blur="select_by_lose_focus">\
-    <span class="input-group-addon">\
+    <span class="input-group-addon" style="padding: 10px">\
     <span class="fa fa-calendar"></span>\
     </span>\
     </div>\
     </div>',
     'mounted': function() {
-        console.log('dasda')
         today = new Date();
         today = moment(today).format('YYYY-MM-DD');
         $(this.$el.firstChild).datetimepicker({
