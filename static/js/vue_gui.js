@@ -38,9 +38,16 @@ var app = new Vue({
     'data': {
         'asd': 1,
         'date': '',
+        'todo': {'text': '', 'date': ''},
     },
     'computed': {},
     'created': function () {},
     'watch': {},
-    'methods': {}
+    'methods': {
+        'addOnclick': function () {
+            console.log(this.todo.text)
+            this.todo.date = app.$refs.start_time.date
+            console.log(app.$refs.start_time.date)
+        }
+    }
 })

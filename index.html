@@ -14,8 +14,29 @@
 <body>
     <div class="col-md-2" id="app" style="padding: 8px;">
       <datepicker ref="start_time" :date="date"></datepicker>
+    <div class="col-md-12">
+        <div class="col-md-8 box-header" >
+            <ul style="padding: 0px">
+              <div class="input-group">
+                <input type="text" class="form-control" v-on:keyup.enter="addOnclick()" v-model="todo.text">
+                <span class="input-group-addon">
+                    <button>
+                      <a href="#"><i class="fa fa-plus" @click="addOnclick()"></i></a>
+                    </button>
+                </span>
+              </div>
+            </ul>
+        </div>
+        <div style="padding: 12px; float: right;">
+            <ul class="pagination pagination-sm no-margin pull-right">
+                <li v-on:click="previous_page_onclick()" ><button id="previous_button" class="btn btn-default">«</button></li>
+                <li v-on:click="next_page_onclick()"><button id="next_button" class="btn btn-default">»</button></li>
+                <button id="create_button" data-toggle="modal" data-target="#modal-data-model" title="Ekle" class="btn btn-primary btn-md" @click="new_data_onclick()">Ekle</button>
+            </ul>
+        </div>
     </div>
 
+  </div>
   <script src="static/js/jQuery/jquery.min.js"></script>
 
   <script src="static/js/datepick_normal/moment-with-locales.min.js"></script>
